@@ -3,7 +3,7 @@ def discriminant (a, b, c):
     return D
 
 print("Hello, that's example of your discriminant function: \n 2x^2 - 6x + 4")
-a = int(input("What's your \"A\" parameters: "))
-b = int(input("What's your \"B\" parameters: "))
-c = int(input("What's your \"C\" parameters: "))
+a = int(input("\tWhat's your \"A\" parameters: "))
+b = int(input("\tWhat's your \"B\" parameters: "))
+c = int(input("\tWhat's your \"C\" parameters: "))
 print(discriminant(a, b, c))
