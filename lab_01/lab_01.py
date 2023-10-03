@@ -6,7 +6,7 @@
 list = [
     {"name":"Bob", "phone":"0631234567", "profession":"CS", "groupNum":"221"},
     {"name":"Emma", "phone":"0631234567", "profession":"CS", "groupNum":"222"},
-    {"name":"Jon",  "phone":"0631234567", "profession":"PE", "groupNum":"221"},
+    {"name":"John",  "phone":"0631234567", "profession":"PE", "groupNum":"221"},
     {"name":"Zak",  "phone":"0631234567", "profession":"PE", "groupNum":"222"}
 ]
 
@@ -51,22 +51,30 @@ def deleteElement():
 
 def updateElement():
     name = input("Please enter name to be updated: ")
-    for elem in list:
-        if elem["name"] == name:
-            print("Student " + elem["name"] + " found. Please update the information:")
-            new_name = input("New student name: ")
-            new_phone = input("New student phone: ")
-            new_profession = input("New student profession: ")
-            new_groupNum = input("New student group number: ")
-            
-            elem["name"] = new_name
-            elem["phone"] = new_phone
-            elem["profession"] = new_profession
-            elem["groupNum"] = new_groupNum
-            
-            print("Student updated successfully.")
-            return
-    print("Student not found.")
+    deletePosition = -1
+    for item in list:
+        if name == item["name"]:
+            deletePosition = list.index(item)
+            break
+    if deletePosition == -1:
+        print("Element was not found")
+    else:
+        print("Update position " + str(deletePosition))
+        del list[deletePosition]
+    name = input("Please enter student name: ")
+    phone = input("Please enter student phone: ")
+    profession = input("Please enter student profession: ")
+    groupNum = input("Please enter student group number: ")
+    newItem = {"name": name, "phone": phone, "profession": profession, "groupNum": groupNum}
+    insertPosition = 0
+    for item in list:
+        if name > item["name"]:
+            insertPosition += 1
+        else:
+            break
+    list.insert(insertPosition, newItem)
+    print("The element has been updated.")
+    return
 
 def main():
     while True:
