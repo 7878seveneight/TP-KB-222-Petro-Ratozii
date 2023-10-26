@@ -1,0 +1,20 @@
+
+
+	2023-10-26 15:11:00 
+Instance: 2.0 + 5.0 = 7.0 
+Operation: +, First num: 2.0, Second num: 5.0, Result or operation: 7.0
+
+	2023-10-26 15:11:06 
+Instance: 5.0 - 10.0 = -5.0 
+Operation: -, First num: 5.0, Second num: 10.0, Result or operation: -5.0
+
+	2023-10-26 15:11:15 
+Instance: 2.0 * 4.0 = 8.0 
+Operation: *, First num: 2.0, Second num: 4.0, Result or operation: 8.0
+
+	2023-10-26 15:11:26 
+Instance: 1.0 / 0.5 = 2.0 
+Operation: /, First num: 1.0, Second num: 0.5, Result or operation: 2.0
+
+	2023-10-26 15:13:00
+Quit from program.
