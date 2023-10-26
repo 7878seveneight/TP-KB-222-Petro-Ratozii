@@ -17,12 +17,12 @@ while True:
     else: 
         print("Invalid option. Try againg...")
 
-sorted_by_name = sorted(students, key=getName, reverse=sortType)
+sortedName = sorted(students, key=getName, reverse=sortType)
 print("\n Сортування за ім'ям:")
-for student in sorted_by_name:
+for student in sortedName:
     print(f"Name: {student['name']}, Grade: {student['grade']}")
 
-sorted_by_grade = sorted(students, key=getGrade, reverse=sortType)
+sortedGrade = sorted(students, key=getGrade, reverse=sortType)
 print("\n Сортування за оцінкою:")
-for student in sorted_by_grade:
+for student in sortedGrade:
     print(f"Name: {student['name']}, Grade: {student['grade']}")
