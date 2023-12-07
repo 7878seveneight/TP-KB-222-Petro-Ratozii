@@ -44,7 +44,8 @@ def zpz(tokens):
     return stack.pop()
 
 def main():
-    tokens = ["16", "/", "(","5","3","-",")", "3", "^"]
+    expression = input("Введіть вираз в зворотньому польському коді: ")
+    tokens = expression.split()
     result = zpz(tokens)
     print(result)
 
